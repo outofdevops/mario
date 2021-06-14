@@ -1,0 +1,10 @@
+name: GitHub Actions
+on: [push]
+jobs:
+  Job-One:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "$GITHUB_RUN_ID"
+      - run: sleep 60
+      
