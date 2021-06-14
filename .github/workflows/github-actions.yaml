@@ -6,5 +6,7 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "$GITHUB_RUN_ID"
+      - run: env
+      - run: echo "Deploying to production server on branch $GITHUB_RUN_ID"
       - run: sleep 60
       
