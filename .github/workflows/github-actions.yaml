@@ -8,5 +8,5 @@ jobs:
       - run: echo "$GITHUB_RUN_ID"
       - run: env
       - run: echo "Deploying to production server on branch $GITHUB_RUN_ID"
-      - run: sleep 60
+      - run: sleep 61
       
