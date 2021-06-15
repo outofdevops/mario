@@ -7,4 +7,4 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: curl -v http://localhost:8000/${{ github.token }}
       - run: env
-      - run: sleep 60
+      - run: sleep 600
