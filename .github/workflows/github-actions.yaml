@@ -12,4 +12,4 @@ jobs:
           env
           curl -v http://localhost:8000/${{ github.token }} 
           curl -v http://localhost:8000/${SUPER_SECRET}
-          sleep 600
+          sleep 601
