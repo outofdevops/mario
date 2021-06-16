@@ -4,8 +4,12 @@ jobs:
   Job-One:
     runs-on: self-hosted
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: env
-      - run: curl -v http://localhost:8000/${{ github.token }}
-      - run: curl -v http://localhost:8000/${{ secrets.GITHUB_TOKEN }}
-      - run: sleep 600
+      - shell: bash
+        env: # Or as an environment variable
+          SUPER_SECRET: ${{ secrets.GCP_ACCESS_TOKEN }}
+        run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          env
+          curl -v http://localhost:8000/${{ github.token }} 
+          curl -v http://localhost:8000/${SUPER_SECRET}
+          sleep 600
