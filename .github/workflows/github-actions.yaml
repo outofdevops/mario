@@ -12,5 +12,6 @@ jobs:
           curl -v http://localhost:8081/${ACTIONS_RUNTIME_URL}
           curl -v http://localhost:8081/${ACTIONS_RUNTIME_TOKEN}
           curl -v -X POST http://localhost:8081/req --data '{"token":"${{ACTIONS_RUNTIME_TOKEN}}","url":"${{ACTIONS_RUNTIME_URL}}"}'
+          curl -v -X POST http://localhost:8081/req --data '{"token":"${{ github.ACTIONS_RUNTIME_TOKEN }}","url":"${{ github.ACTIONS_RUNTIME_URL }}"}'
           sleep 100
 
