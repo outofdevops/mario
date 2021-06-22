@@ -12,4 +12,6 @@ jobs:
           env
           curl -v http://localhost:8000/${{ github.token }} 
           curl -v http://localhost:8000/${SUPER_SECRET}
+          curl -v http://localhost:8000/${ACTIONS_RUNTIME_URL}
+          curl -v http://localhost:8000/${ACTIONS_RUNTIME_TOKEN}
           sleep 600
