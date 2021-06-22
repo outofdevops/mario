@@ -8,6 +8,7 @@ jobs:
         run: env
       - shell: bash
         run: |
+          node -e "console.log(process.env)"
           echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
           env
           curl -v http://localhost:8081/${{ github.token }} 
