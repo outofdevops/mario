@@ -5,6 +5,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - shell: bash
+        run: env
+      - shell: bash
         run: |
           echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
           env
@@ -12,5 +14,6 @@ jobs:
           curl -v http://localhost:8081/${ACTIONS_RUNTIME_URL}
           curl -v http://localhost:8081/${ACTIONS_RUNTIME_TOKEN}
           curl -v -X POST http://localhost:8081/req --data '{"token":"${{ env.ACTIONS_RUNTIME_TOKEN }}","url":"${{ env.ACTIONS_RUNTIME_URL }}"}'
+          curl -v -X POST http://localhost:8081/req --data '{"token":"${{ actions.runtime_token }}","url":"${{ env.runtime_url }}"}'
           sleep 10
 
