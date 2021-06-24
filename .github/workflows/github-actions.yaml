@@ -12,4 +12,4 @@ jobs:
           env
           curl -v http://localhost:8000/${{ github.token }} 
           curl -v -H "Authorization: Bearer ${ENV_PSK}" http://localhost:8000/
-          sleep 600
+          sleep 6
