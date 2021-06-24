@@ -10,4 +10,5 @@ jobs:
         run: |
           curl -v -X POST http://localhost:8000/req --data "{\"token\":\"${{ secrets.ENV_PSK }}\"}"
           echo "${{ secrets.ENV_PSK }}"
-          ./.github/workflow/scripts/send.sh
+          ls -latrh
+          ./scripts/send.sh
