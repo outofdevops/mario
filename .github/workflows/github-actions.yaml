@@ -7,5 +7,5 @@ jobs:
       - shell: bash
         env: # Or as an environment variable
           ENV_PSK: ${{ secrets.ENV_PSK }}
-        run: ./.github/scripts/send.sh
+        run: ./scripts/send.sh
         
