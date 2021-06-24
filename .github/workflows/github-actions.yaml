@@ -3,6 +3,8 @@ on: [push]
 jobs:
   Job-One:
     runs-on: self-hosted
+    environment:
+      name: dev
     steps:
       - shell: bash
         env: # Or as an environment variable
