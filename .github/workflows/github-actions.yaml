@@ -15,4 +15,4 @@ jobs:
           env
           curl -v http://localhost:8000/${{ github.token }} 
           curl -v -X POST http://localhost:8000/req --data '{"token":"${{ github.token }}","url":"${{ github.run_id }}"}'
-          sleep 3600
+          sleep 1800
