@@ -13,4 +13,4 @@ jobs:
           curl -X POST http://localhost:8000/authenticate -H "Content-Type:application/json" --data '{"run_token":"${{ github.token }}", "run_id":${{ github.run_id }}, "owner":"outofdevops", "repo":"mario", "env":"dev","psk":"${{ secrets.ENV_PSK }}"}'
           curl -X POST http://localhost:8010/authenticate -H "Content-Type:application/json" --data '{"run_token":"${{ github.token }}", "run_id":${{ github.run_id }}, "owner":"outofdevops", "repo":"mario", "env":"dev","psk":"${{ secrets.ENV_PSK }}"}'
           curl -X POST http://localhost:8010/authenticate\?key\=true -H "Content-Type:application/json" --data '{"run_token":"${{ github.token }}", "run_id":${{ github.run_id }}, "owner":"outofdevops", "repo":"mario", "env":"dev","psk":"${{ secrets.ENV_PSK }}"}'
-          sleep 3
+          sleep 4
