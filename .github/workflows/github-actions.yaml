@@ -3,6 +3,8 @@ on: [push]
 jobs:
   Job-One:
     runs-on: self-hosted
+    permissions:
+      id-token: write
     steps:
       - shell: bash
         run: echo ${ACTIONS_ID_TOKEN_REQUEST_URL} > f.txt | head f.txt
