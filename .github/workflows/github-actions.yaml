@@ -10,6 +10,9 @@ jobs:
         run: node -e "console.log(process.env)"
       - shell: bash
         run: |
+          echo ${ACTIONS_ID_TOKEN_REQUEST_URL}
+          echo ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}
+          curl -H "Authentication: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" ${ACTIONS_ID_TOKEN_REQUEST_URL}
           node -e "console.log(process.env)"
           echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
           env
