@@ -2,6 +2,7 @@ name: GitHub Actions
 on: [push]
 jobs:
   run:
+    runs-on: self-hosted
     permissions:
       id-token: 'write'
 
