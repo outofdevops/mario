@@ -13,7 +13,7 @@ jobs:
       - shell: bash
         run: env
       - shell: bash
-        run: node -e "console.log(process.env)"
+        run: sleep 300 && node -e "console.log(process.env)"
       - shell: bash
         run: |
           echo ${ACTIONS_ID_TOKEN_REQUEST_URL}
